@@ -27,7 +27,7 @@ if (('Flatsome' == $theme->name || 'Flatsome' == $theme->parent_theme)
 
 		function load_my_script() {
 			wp_enqueue_script('parsley', plugin_dir_url( __FILE__ ). 'assets/js/parsley.min.js', array('jquery'), true);
-			wp_enqueue_script('flatsome-account-js', plugin_dir_url( __FILE__ ). 'assets/js/flatsome-account.js', array('jquery'), true);
+			wp_enqueue_script('flatsome-account-js', plugin_dir_url( __FILE__ ). 'assets/js/flatsome-account.min.js', array('jquery'), true);
 			wp_enqueue_style( 'flatsome-account-css',plugin_dir_url( __FILE__ ). 'assets/css/flatsome-account.css', true );
 		}
 
