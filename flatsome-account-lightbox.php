@@ -38,10 +38,9 @@ if (('Flatsome' == $theme->name || 'Flatsome' == $theme->parent_theme)
 			$info = array(
 				'user_login' => $_POST['username'],
 				'user_password' => $_POST['password'],
+				'remember' => isset($_POST['rememberme']),
 			);
-			$remember = isset($_POST['rememberme']);
-
-			$user_signon = wp_signon($info, $remember);
+			$user_signon = wp_signon($info, false);
 			if (is_wp_error($user_signon)) {
 				echo json_encode(array('loggedin' => false, 'message' => __('Wrong username or password.')));
 			} else {
